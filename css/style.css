@@ -1,0 +1,465 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: black;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: rgb(184, 60, 87);
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+
+
+  /*============
+BASIC STYLE
+============*/
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+p {
+	font-size: 13px;
+	color: #7a7a7a;
+	line-height: 22px;
+}
+
+.primary-button a {
+	text-decoration: none;
+	padding: 10px 18px;
+	display: inline-block;
+	border-radius: 24px;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+
+/* ======================
+----- FIRST SECTION------
+=======================*/
+
+.first-section {
+	background-image: url(../img/first-section-bg.png);
+	background-size: cover;
+	width: 100%;
+	background-repeat: no-repeat;
+	padding: 20% 0px 20% 0px;
+}
+
+.first-section .text-content {
+	text-align: right;
+	color: #fff;
+}
+
+.first-section .text-content h2 {
+	font-size: 44px;
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+.first-section .text-content .line-dec {
+	width: 60px;
+	height: 3px;
+	background-color: #fff;
+	margin: 25px 0px 25px auto;
+}
+
+.first-section .text-content span {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+/* ===============================
+----- Second SECTION CSS Grid ----
+================================*/
+/*Container alignment*/
+.grid-container {
+    display: grid;
+    grid-template-columns: (1,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    max-width: auto;
+    margin: 0 auto;
+    grid-gap: 10px;
+    /* align-content: center; */
+    grid-template-areas:
+      'header'
+      'item1'
+      'item2'
+      'item3'
+      'item4';
+  }
+  
+  /*Background and text Color for all boxes*/
+  .grid-container >*{
+    background:whitesmoke;
+    color: black;
+    text-align: center;
+    /* padding: 30px; */
+  }
+  
+  /*Align items in grid*/
+  .header{ grid-area: header;}
+  .item1 { grid-area: item1; }
+  .item2 { grid-area: item2; }
+  .item3 { grid-area: item3; }
+  .item4 { grid-area: item4; }
+
+/* ======================
+----- THIRD SECTION------
+=======================*/
+
+/* .third-section {
+	background-image: url(../img/third-section-bg.png);
+	background-size: cover;
+    width: auto;
+	background-repeat: no-repeat;
+	padding: 20% 0px;
+}
+
+.third-section .left-image img {
+	width: auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+.third-section .right-text {
+	display: inline;
+}
+
+.third-section em {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 300;
+}
+
+.third-section h4 {
+	margin-top: 60px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.third-section p {
+	color: #fff;
+	margin-top: 15px;
+}
+ */
+/* ======================
+----- FOOTER SECTION ----
+=======================*/
+
+footer {
+	text-align: center;
+	background-image: url(../img/footer-bg.png);
+	background-size: cover;
+	width: 100%;
+	background-repeat: no-repeat;
+	padding: 11% 0px 4% 0px;
+}
+
+footer ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+footer ul li {
+	display: inline-block;
+	margin: 0 3px;
+}
+
+footer ul li a {
+	font-size: 16px;
+	color: #415b90;
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+footer ul li a:hover {
+	background-color: #22304d;
+	color: #415b90;
+	transition: all 0.3s;
+}
+
+footer p {
+	margin-top: 20px;
+	font-size: 13px;
+	font-weight: 300;
+	letter-spacing: 0.2px;
+	color: #fff;
+}
+
+footer em {
+	font-style: normal;
+	font-weight: 600;
+}
+
+footer a {
+	color: #fff;
+}
+
+footer a:hover {
+	color: #3CF;
+}
+
+
+/* ======================
+-- RESPONSIVE SECTION ---
+=======================*/
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+@media (max-width: 1200px){
+
+	.fourth-section .send-to-portfolio {
+		padding:  47.5% 0px;
+	}
+
+	.gallery-page .portfolio-items  {
+		margin-right: 15px;
+	}
+
+}
+
+@media (max-width: 992px){
+
+	.fourth-section .send-to-portfolio {
+		padding:  45.8% 0px;
+	}
+
+	.third-section {
+		text-align: center;
+	}
+
+	.third-section .right-text {
+		text-align: left;
+	}
+
+	.third-section .left-image img {
+		width: 50%;
+	}
+
+	.fivth-section {
+		text-align: center;
+	}
+
+	.fivth-section .left-text {
+		text-align: left;
+	}
+
+	.fivth-section .right-image img {
+		margin-top: 30px;
+		width: 50%;
+	}
+
+	.sixth-section .right-info {
+		text-align: left;
+		margin-left: 0px;
+		margin-top: 45px;
+	}
+
+}
+
+@media (max-width: 850px){
+
+	.send-to-home  {
+		margin-top: 80px;
+	}
+
+	.first-gallery-section {
+		padding: 10% 0px 40% 0px;
+	}
+
+	.first-section {
+		padding: 150px 0px 200px 0px;
+	}
+
+	.first-section .text-content {
+		text-align: center;
+	}
+
+	.first-section .text-content .line-dec {
+		margin: 25px auto;
+	}
+
+	.second-section {
+		padding: 50px 0px 0px 0px;
+	}
+
+	.second-section .service-item {
+		margin-bottom: 50px;
+	}
+
+	.third-section {
+		margin-top: -50px;
+		text-align: center;
+		padding: 250px 0px 150px 0px;
+	}
+
+	.third-section .right-text {
+		text-align: left;
+	}
+
+	.fourth-section {
+		padding: 150px 0px;
+	}
+
+	.fourth-section .col-md-3 {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.fourth-section .portfolio-item {
+		margin-bottom: 30px;
+	}
+
+	.fourth-section .send-to-portfolio {
+		padding:  46% 0px;
+	}
+
+	.fivth-section {
+		text-align: center;
+		padding: 50px 0px 250px 0px;
+	}
+
+	.fivth-section .left-text {
+		text-align: left;
+		margin-bottom: 30px;
+		display: inline-block;
+	}
+
+	.sixth-section {
+		text-align: center;
+		padding: 0px 0px 0px 0px;
+	}
+
+	.sixth-section .right-info {
+		text-align: left;
+		margin-left: 0px;
+		margin-top: 45px;
+	}
+
+	footer {
+		margin-top: -50px;
+		padding: 200px 0px 20px 0px;
+	}
+}
+
+
+@media (max-width: 590px){
+
+	.third-section {
+		text-align: center;
+	}
+
+	.third-section .left-image img {
+		width: 80%;
+	}
+
+	.fivth-section {
+		text-align: center;
+	}
+
+	.fivth-section .right-image img {
+		width: 80%;
+	}
+	
+}
+
+
+
+/*Media query CSS Grid for table view*/
+@media(min-width: 500px){
+    .grid-container{
+      display: grid;
+      grid-template-columns: (4,1fr);
+      grid-auto-rows: minmax(100px,auto);
+      max-width: auto;
+      margin: 0 auto;
+      grid-gap: 10px;
+      grid-template-areas:
+        'header header header header'
+        'item1 item1 item2 item2'
+        'item3 item3 item4 item4 ';
+    }
+  }
+  
+  /*Media query CSS Grid for desktop view*/
+  @media(min-width: 900px){
+    .grid-container{
+      display: grid;
+      grid-template-columns: (4,1fr);
+      grid-auto-rows: minmax(100px,auto);
+      max-width: auto;
+      margin: 0 auto;
+      grid-gap: 10px;
+      grid-template-areas:
+        'header header header header'
+        'item1 item2 item3 item4'
+        ;
+    }
+  }

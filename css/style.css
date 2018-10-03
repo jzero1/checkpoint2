@@ -4,7 +4,7 @@ NAV Menu STYLE
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: black;
+    background-color: white;
     overflow: hidden;
 }
 
@@ -12,7 +12,7 @@ NAV Menu STYLE
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -104,6 +104,66 @@ p {
 	font-weight: 300;
 	letter-spacing: 1px;
 }
+
+/* ===============================
+ SECOND SECTION Flexbox Grid 
+================================*/
+ .art1syle {
+    text-align: center;
+    font-size: 2vw;
+    color: black;
+  }
+
+  .row {
+	display: flex;
+  }
+  
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  .virtual {
+    position: relative;
+	width: 50%;
+	align-content: center;
+  }
+  
+  .image {
+    display: block;
+    width: 75%;
+    height: 100%;
+  }
+  
+  /* Text overlay for pics  */
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:auto;
+    width: 75%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(222, 229, 231);
+  }
+  
+  /* Overlay for pics  */
+  .virtual:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* format Text over pics  */
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 
 /* ===============================
  SECOND SECTION CSS Grid 
